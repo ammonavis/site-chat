@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Chat du Milieu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap">
+<style>
+  /* Mise en page : une seule scène centrée, la photo est le sujet, le texte reste discret */
+  :root {
+    --bg: #f3efe7;
+    --fg: #2a2520;
+    --muted: #7a6f63;
+    --frame: #ffffff;
+    --shadow: rgba(60, 45, 30, 0.22);
+    --accent: #c57b3a;
+    --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c1917; --fg: #efe8de; --muted: #a39687; --frame: #2a2522;
+      --shadow: rgba(0, 0, 0, 0.55); --accent: #e0995a; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1c1917; --fg: #efe8de; --muted: #a39687; --frame: #2a2522;
+    --shadow: rgba(0, 0, 0, 0.55); --accent: #e0995a; color-scheme: dark;
+  }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    display: grid;
+    place-items: center;
+    padding-block: 32px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    box-sizing: border-box;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    max-width: 100%;
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  figure {
+    margin: 0;
+    background: var(--frame);
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 18px 50px -12px var(--shadow);
+    max-width: 100%;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    width: min(420px, 100%);
+    height: auto;
+    border-radius: 3px;
+  }
+  figcaption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  p.note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  p.note span { color: var(--accent); }
+</style>
+
+</head>
+<body>
+<main>
+  <h1>Un chat, au milieu.</h1>
+  <figure>
+    <img src="chat.jpg" alt="Chat au pelage écaille de tortue et aux yeux verts, assis sur une couverture à motifs" width="400" height="700">
+    <figcaption>Pelage écaille de tortue, yeux verts, regard vers la fenêtre.</figcaption>
+  </figure>
+  <p class="note">Ronronnement non inclus <span>♥</span></p>
+</main>
+</body>
+</html>
